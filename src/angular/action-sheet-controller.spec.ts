@@ -35,4 +35,15 @@ describe('ActionSheetControllerMock', () => {
            expect(result).toBe(actionSheet);
         });
     });
+
+    describe('instance', () => {
+        it('should return passed ActionSheet', () => {
+            let actionSheet = new ActionSheetMock();
+            classUnderTest = ActionSheetControllerMock.instance(actionSheet);
+
+            let result = classUnderTest.create();
+
+           expect(result).toBe(actionSheet);
+        });
+    });
 });
