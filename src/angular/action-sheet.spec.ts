@@ -36,4 +36,12 @@ describe('ActionSheetMock', () => {
             });
         });
     });
+
+    describe('instance', () => {
+        it('should return new instance of ActionSheetMock', () => {
+            let actionSheet = ActionSheetMock.instance();
+
+           expect(actionSheet).toEqual(jasmine.any(ActionSheetMock));
+        });
+    });
 });
