@@ -35,4 +35,15 @@ describe('AlertControllerMock', () => {
            expect(result).toBe(actionSheet);
         });
     });
+
+    describe('instance', () => {
+        it('should return passed ActionSheet', () => {
+            let alertMock = new AlertMock();
+            classUnderTest = AlertControllerMock.instance(alertMock);
+
+            let result = classUnderTest.create();
+
+           expect(result).toBe(alertMock);
+        });
+    });
 });
